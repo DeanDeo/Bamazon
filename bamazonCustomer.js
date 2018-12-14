@@ -22,7 +22,22 @@ connection.connect(function(err) {
     connection.query("SELECT * FROM products", function(err, res) {
       if (err) throw err;
       console.log(res);
-      connection.end();
-    });
-  }
+
+    inquirer
+      .prompt([
+    {
+        name: "Buy",
+        type: "rawlist",
+        message: "What is the ID of the product you would like to buy?",
+        choices: ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
+      },
+    {
+        name: "HowMany",
+        type: "input",
+        message: "How Many?"
+      }],
+      )}
+      )};
+
+
 
