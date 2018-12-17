@@ -72,6 +72,7 @@ function mainMenu(items) {
           (choice.stock_quantity - answers.HowMany) +
           " WHERE id = " +
           answers.Buy;
+        //^Pretty positive this is where my error is coming from?
 
         connection.query(updateProducts, function(err) {
           if (err) throw err;
