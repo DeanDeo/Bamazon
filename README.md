@@ -1,3 +1,3 @@
 This application creates an Amazon-like storefront with MySql. The app will take in orders from customers and deplete stock from the store's inventory.
 
-https://user-images.githubusercontent.com/44249106/50936089-e5a20900-1433-11e9-8414-34b942670a3e.PNG
+<img width="357" alt="home" src="https://user-images.githubusercontent.com/44249106/50936221-63661480-1434-11e9-8062-15b063faef87.PNG">
