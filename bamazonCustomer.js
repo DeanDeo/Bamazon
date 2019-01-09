@@ -68,13 +68,11 @@ function mainMenu(items) {
         );
 
         var updateProducts =
-          "UPDATE products SET stock_quantity = " +
-          (choice.stock_quantity - answers.HowMany) +
-          " WHERE id = " +
-          answers.Buy;
-        //^Pretty positive this is where my error is coming from?
+          "UPDATE products SET stock_quantity =  stock_quantity - ? WHERE id = ?";
 
-        connection.query(updateProducts, function(err) {
+        connection.query(updateProducts, answers.HowMany, choiceid, function(
+          err
+        ) {
           if (err) throw err;
 
           console.log("Your oder has been placed!");
